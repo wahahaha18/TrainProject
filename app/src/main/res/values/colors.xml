@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#201F5F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="title_color">#201F5F</color>
+
+    <color name="bottom_un_select_color">#B7B8B2</color>
+    <color name="bottom_select_color">#007AD9</color>
+    <color name="white">#ffffff</color>
+    <color name="c_alpha_item">#6a000000</color>
+    
+    <!--登录界面-->
+    <color name="c_frame">#D3D3D3</color>
+    <color name="c_et_bg">#00000000</color>
+    <color name="c_login_button_bg">#3399FF</color>
+    <color name="c_text">#FAFAFA</color>
+    <color name="c_et_text">#303030</color>
+
+    <!--首页-->EFF3F4
+    <color name="c_h_divider">#EFF3F4</color>
+    <color name="c_h_bg">#FAFAFA</color>
+    <color name="c_h_left">#3699FE</color>
+    <color name="c_h_nf_title">#474747</color>
+    <color name="c_h_nf_time">#9D9D9D</color>
+    <color name="c_h_nf_divider">#EAEBEA</color>
+
+    <!--作业管理-->
+    <color name="c_tab_un_text">#585858</color>
+
+    <!--选择作业-->
+    <color name="c_select_task_bg">#F2F2F2</color>
+    <color name="c_b_reset">#3399FE</color>
+    <color name="c_sp_text">#53A8FF</color>
+
+    <!--作业记录-->
+    <color name="c_is_finish">#676767</color>
+    <color name="c_un_finish">#4B9515</color>
+    <color name="c_to_upload">#F69709</color>
+    <color name="c_un_scan">#999999</color>
+
+</resources>

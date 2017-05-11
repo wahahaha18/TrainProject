@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_select_task_bg"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/ns_st"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_crh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/s_crh"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s_16"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rb_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s_8"/>
+                    </RadioGroup>
+
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_task_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/s_task_model"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp" />
+
+                    <!--<Spinner-->
+                        <!--android:id="@+id/sp_task_model"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@drawable/sp_bg"/>-->
+                    <TextView
+                        android:id="@+id/tv_st_sp"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:drawableRight="@drawable/hp_blue_arrow"
+                        android:drawablePadding="20dp"
+                        android:gravity="center"
+                        android:ellipsize="end"
+                        android:background="@drawable/sp_bg"
+                        android:textColor="@color/c_tab_un_text" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_train_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/s_train_number"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginBottom="17dp"/>
+
+                    <EditText
+                        android:id="@+id/et_train_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/c_et_bg"
+                        android:hint="@string/s_et_train_number"
+                        android:textSize="15sp"
+                        android:textColor="@color/c_tab_un_text"
+                        android:layout_gravity="center_vertical"/>
+
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_starting_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/s_starting_time"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginBottom="17dp"/>
+
+                    <EditText
+                        android:id="@+id/et_starting_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/c_et_bg"
+                        android:hint="@string/s_et_starting_time"
+                        android:textSize="15sp"
+                        android:textColor="@color/c_tab_un_text"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <Button
+                        android:id="@+id/tv_b_confirm"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/b_confim_bg"
+                        android:text="@string/s_b_confirm"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                    <Space
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/tv_b_reset"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/b_reset_bg"
+                        android:text="@string/s_b_reset"
+                        android:textColor="@color/c_b_reset"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>
+

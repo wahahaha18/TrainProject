@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_h_divider"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/ns_je"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_success_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/unfinish_job" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="2"
+                        android:text="检查燃系工作间是否保持通风良好##车厢"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/b_nfc_scan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="14dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/b_confim_bg"
+                        android:text="@string/s_nfc_scan"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_je"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="10dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_ir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/s_inspection_results"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_je"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_not_unusual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s_not_unusual" />
+
+                        <RadioButton
+                            android:id="@+id/rb_unusual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s_unusual" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/s_detail_description"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/et_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/c_et_bg"
+                        android:hint="@string/s_et_description"
+                        android:textColor="@color/c_tab_un_text"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <Button
+                        android:id="@+id/tv_b_save"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/b_confim_bg"
+                        android:text="@string/s_b_save"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                    <Space
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/tv_b_uploading"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/b_reset_bg"
+                        android:text="@string/s_b_uploading"
+                        android:textColor="@color/c_b_reset"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="40dp"--><!--android:layout_weight="1"--><!--android:paddingLeft="10dp"--><!--android:paddingRight="10dp"--><!--android:gravity="center"--><!--android:textColor="@color/c_sp_textview" />-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_sp_line"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"/>
+    <!--<View-->
+    <!--android:id="@+id/v_sp_line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:background="@color/c_sp_textview_line"/>-->
+</LinearLayout>

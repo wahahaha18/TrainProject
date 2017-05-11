@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/c_h_bg">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_jm"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_job_management"
+                        android:text="@string/s_job_management" />
+
+                    <TextView
+                        android:id="@+id/tv_mr"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_malfunction_repair"
+                        android:text="@string/s_malfunction_repair" />
+
+                    <TextView
+                        android:id="@+id/tv_om"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_operation_manual"
+                        android:text="@string/s_operation_manual" />
+
+                    <TextView
+                        android:id="@+id/tv_si"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_sign_in"
+                        android:text="@string/s_sign_int" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_tw"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_timer_wake"
+                        android:text="@string/s_timer_wake" />
+
+                    <TextView
+                        android:id="@+id/tv_rq"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_records_query"
+                        android:text="@string/s_records_query" />
+
+                    <TextView
+                        android:id="@+id/tv_he"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_hurry_event_log"
+                        android:text="@string/s_hurry_event_log" />
+
+                    <TextView
+                        android:id="@+id/tv_ss"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_system_settings"
+                        android:text="@string/s_system_settings" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_ac"
+                        style="@style/st_h1"
+                        android:drawableTop="@drawable/h_add_check"
+                        android:text="@string/s_add_check" />
+
+                    <Space style="@style/st_h1" />
+
+                    <Space style="@style/st_h1" />
+
+                    <Space style="@style/st_h1" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/c_h_divider" />
+
+                <!--<Space-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="10dp" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:divider="@drawable/medium_space"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/c_h_left" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/s_notification_announcement"
+                            android:textSize="15sp"
+                            android:textColor="@color/c_h_nf_title"/>
+
+                        <TextView
+                            android:id="@+id/tv_notify_more"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical|end"
+                            android:text="@string/s_more"
+                            android:textColor="@color/c_h_left"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="通知公告标题一"
+                                android:textSize="14sp"
+                                android:textColor="@color/c_h_nf_title"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="2016-05-31"
+                                android:textSize="12sp"
+                                android:textColor="@color/c_h_nf_time"/>
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="6dp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arrow_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="通知公告标题一"
+                                android:textSize="14sp"
+                                android:textColor="@color/c_h_nf_title"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="2016-05-31"
+                                android:textSize="12sp"
+                                android:textColor="@color/c_h_nf_time"/>
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="6dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arrow_right" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/c_h_divider" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:divider="@drawable/medium_space"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/c_h_left" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/s_today_job"
+                            android:textSize="15sp"
+                            android:textColor="@color/c_h_nf_title"/>
+
+                        <TextView
+                            android:id="@+id/tv_today_more"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical|end"
+                            android:text="@string/s_more"
+                            android:textColor="@color/c_h_left"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="站台巡视作业"
+                                android:textSize="14sp"
+                                android:textColor="@color/c_h_nf_title"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="2016-05-31"
+                                android:textSize="12sp"
+                                android:textColor="@color/c_h_nf_time"/>
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="6dp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arrow_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="站台巡视作业1"
+                                android:textSize="14sp"
+                                android:textColor="@color/c_h_nf_title"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="2016-05-31"
+                                android:textSize="12sp"
+                                android:textColor="@color/c_h_nf_time"/>
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="6dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arrow_right" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="站台巡视作业1"
+                                android:textSize="14sp"
+                                android:textColor="@color/c_h_nf_title"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="2016-05-31"
+                                android:textSize="12sp"
+                                android:textColor="@color/c_h_nf_time"/>
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="6dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arrow_right" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>
+

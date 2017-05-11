@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">TrainProject</string>
+
+    <!--主界面-->
+    <string name="s_main_home">首页</string>
+    <string name="s_main_job">作业管理</string>
+    <string name="s_main_om">操作手册</string>
+    <string name="sp_name">dc</string>
+    <string name="s_to_be_developed">待开发</string>
+    <string name="s_login_button">登录</string>
+    <string name="s_login_name">请输入用户名</string>
+    <string name="s_login_password">请输入登录密码</string>
+
+    <!--首页-->
+    <string name="s_job_management">作业管理</string>
+    <string name="s_malfunction_repair">故障维修</string>
+    <string name="s_operation_manual">操作手册</string>
+    <string name="s_sign_int">签到</string>
+    <string name="s_timer_wake">定时唤醒</string>
+    <string name="s_records_query">车统记录查询</string>
+    <string name="s_hurry_event_log">紧急事件记录</string>
+    <string name="s_system_settings">系统设置</string>
+    <string name="s_add_check">添乘检查</string>
+    <string name="s_notification_announcement">通知公告</string>
+    <string name="s_today_job">今日作业</string>
+    <string name="s_more">更多...</string>
+    <!--作业管理-->
+    <string name="s_select_tasks">选择作业任务</string>
+    <string name="s_todat_tasks">今日作业</string>
+    <string name="s_tasks_log">作业记录</string>
+
+    <!--选择作业-->
+    <string name="s_task_model">任务模式 :</string>
+    <string name="s_train_number">车次 :</string>
+    <string name="s_et_train_number">(请输入车次)</string>
+    <string name="s_starting_time">始发时间 :</string>
+    <string name="s_arrival_time">到达时间 :</string>
+    <string name="s_et_starting_time">(请输入始发时间)</string>
+    <string name="s_b_confirm">确定</string>
+    <string name="s_b_reset">重置</string>
+    <string name="s_crh">动车组 :</string>
+    <string name="s_16">16编组</string>
+    <string name="s_8">8编组</string>
+
+    <!--作业记录-->
+    <string name="s_is_finish">已完成</string>
+    <string name="s_un_finish">未完成</string>
+    <string name="s_to_upload">待上传</string>
+    
+    <!--作业执行-->
+    <string name="s_nfc_scan">NFC扫描</string>
+    <string name="s_inspection_results">巡检结果</string>
+    <string name="s_not_unusual">无异常</string>
+    <string name="s_unusual">异常</string>
+    <string name="s_detail_description">详细描述 ：</string>
+    <string name="s_et_description">(请输入详细描述)</string>
+    <string name="s_b_save">保存</string>
+    <string name="s_b_uploading">上传</string>
+</resources>
