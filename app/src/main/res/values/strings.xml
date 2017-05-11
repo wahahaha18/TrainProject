@@ -46,7 +46,7 @@
     <string name="s_is_finish">已完成</string>
     <string name="s_un_finish">未完成</string>
     <string name="s_to_upload">待上传</string>
-    
+
     <!--作业执行-->
     <string name="s_nfc_scan">NFC扫描</string>
     <string name="s_inspection_results">巡检结果</string>
