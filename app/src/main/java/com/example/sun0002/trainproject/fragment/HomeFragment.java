@@ -79,8 +79,8 @@ public class HomeFragment extends BasePageFragment implements View.OnClickListen
 
                 NextActivity.start(getContext(), bundle);
                 break;
-            case R.id.tv_he:
-                bundle.putString("type", "dc");
+            case R.id.tv_he://紧急事件记录
+                bundle.putString("type", "rf");
                 bundle.putString("title", binding.tvHe.getText().toString());
                 NextActivity.start(getContext(), bundle);
                 break;

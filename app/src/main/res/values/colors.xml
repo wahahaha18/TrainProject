@@ -39,4 +39,7 @@
     <color name="c_to_upload">#F69709</color>
     <color name="c_un_scan">#999999</color>
 
+    <!--录音-->
+    <color name="c_record_time">#868686</color>
+
 </resources>

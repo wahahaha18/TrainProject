@@ -9,6 +9,7 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -216,7 +217,7 @@ public class JobExecutionFragment extends BasePageFragment implements View.OnCli
 //                if (del_list.get(position).isCheck()){
 //                    Log.e(TAG, "onLongClicked: "+del_list.get(position).isCheck() );
 //                    //删除缓存文件夹中的文件
-            MyFileUtils.delFile(typeNum,del_list.get(position).getImagePath());
+            MyFileUtils.delFile(typeNum, del_list.get(position).getImagePath());
             del_list.remove(position);
             Log.e(TAG, "onLongClicked: " + del_list.size());
 //                }
@@ -288,7 +289,7 @@ public class JobExecutionFragment extends BasePageFragment implements View.OnCli
                         Bitmap bitmap = ImageUtils.readDownsampledImage(uri1.getPath(), 1080, 1920);
                         Log.e(TAG, "onActivityResult: " + bitmap);
                         //保存到SD中
-                        MyFileUtils.saveBitmap(bitmap, typeNum,fileName);
+                        MyFileUtils.saveBitmap(bitmap, typeNum, fileName);
                         //展示出来
                         ImageItem photo = new ImageItem();
                         photo.setImagePath(fileName + ".JPEG");
@@ -377,12 +378,55 @@ public class JobExecutionFragment extends BasePageFragment implements View.OnCli
      * @param uri
      */
     private void startImageZoom(Uri uri) {
+//        try{
+//            //构建隐式Intent来启动裁剪程序
+//            Intent intent = new Intent("com.android.camera.action.CROP");
+//            // TODO: 2017/3/14 修改android 7.0 无法裁剪
+//            Log.e(TAG, "startImageZoom: " + img);
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                // android 7.0及以上版本
+//                photoURI = FileProvider.getUriForFile(getContext(), "com.example.sun0002.trainproject.fileprovider", img);
+//                Log.e(TAG, "startImageZoom: "+ photoURI);
+//            } else {
+//                photoURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
+//                        "/temp/" + System.currentTimeMillis() + ".jpg"));
+//                Log.e(TAG, "startImageZoom: "+ photoURI);
+//            }
+//
+//            Log.e(TAG, "startImageZoom: " + photoURI);
+//            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+//            intent.setDataAndType(photoURI, "image/*");
+//            //设置数据uri和类型为图片类型
+////        intent.setDataAndType(uri, "image/*");
+//            //显示View为可裁剪的
+//            intent.putExtra("crop", true);
+//            //裁剪的宽高的比例为1:1
+//            intent.putExtra("aspectX", 1);
+//            intent.putExtra("aspectY", 1);
+//            //输出图片的宽高均为150
+//            intent.putExtra("outputX", 200);
+//            intent.putExtra("outputY", 200);
+//            //裁剪之后的数据是通过Intent返回
+//            intent.putExtra("return-data", true);
+//            startActivityForResult(intent, CROP_CODE);
+//        }catch(ActivityNotFoundException a){
+//            String errorMessage = "Your device doesn't support the crop action!";
+//            Toast toast = Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT);
+//            toast.show();
+//        }
         //构建隐式Intent来启动裁剪程序
         Intent intent = new Intent("com.android.camera.action.CROP");
-        // TODO: 2017/3/14 修改android 7.0 无法裁剪
         Log.e(TAG, "startImageZoom: " + img);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            // android 7.0及以上版本
+            photoURI = FileProvider.getUriForFile(getContext(), "com.example.sun0002.trainproject.fileprovider", img);
+            Log.e(TAG, "startImageZoom: "+ photoURI);
+        } else {
+            photoURI = Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
+                    "/temp/" + System.currentTimeMillis() + ".jpg"));
+            Log.e(TAG, "startImageZoom: "+ photoURI);
+        }
 
-        photoURI = FileProvider.getUriForFile(getContext(), "com.example.sun0002.trainproject.fileprovider", img);
         Log.e(TAG, "startImageZoom: " + photoURI);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setDataAndType(photoURI, "image/*");
@@ -403,9 +447,9 @@ public class JobExecutionFragment extends BasePageFragment implements View.OnCli
 
     //删除缓存（删除缓存文件夹中的文件）
     private void deleteCache() {
-        Log.e(TAG, "deleteCache: ................" );
+        Log.e(TAG, "deleteCache: ................");
         for (int i = 0; i < adatper.getList().size(); i++) {
-            MyFileUtils.delFile(typeNum,adatper.getList().get(i).getImagePath());
+            MyFileUtils.delFile(typeNum, adatper.getList().get(i).getImagePath());
         }
     }
 
@@ -419,16 +463,16 @@ public class JobExecutionFragment extends BasePageFragment implements View.OnCli
     public ArrayList<ImageItem> getFilePhoto() {
         ArrayList<ImageItem> imageItems = new ArrayList<>();
         //拿到所有图片文件
-        File[] files = new File(MyFileUtils.SD_PATH+typeNum+File.separator).listFiles();
-        Log.e(TAG, "getFilePhoto: "+files );
+        File[] files = new File(MyFileUtils.SD_PATH + typeNum + File.separator).listFiles();
+        Log.e(TAG, "getFilePhoto: " + files);
 
         if (files != null) {
-            Log.e(TAG, "getFilePhoto: "+files.length);
-            Log.e(TAG, "getFilePhoto: "+files.toString() );
+            Log.e(TAG, "getFilePhoto: " + files.length);
+            Log.e(TAG, "getFilePhoto: " + files.toString());
             for (File file : files) {
                 //解码file拿到bitmap
                 Bitmap bitmap =
-                        BitmapFactory.decodeFile(MyFileUtils.SD_PATH + typeNum+File.separator+file.getName());
+                        BitmapFactory.decodeFile(MyFileUtils.SD_PATH + typeNum + File.separator + file.getName());
                 ImageItem item = new ImageItem();
                 item.setImagePath(file.getName());
                 item.setBitmap(bitmap);

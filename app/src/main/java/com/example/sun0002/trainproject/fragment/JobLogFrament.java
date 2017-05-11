@@ -53,7 +53,7 @@ public class JobLogFrament extends BasePageFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_job_log, container, false);
-
+        Log.e(TAG, "onCreateView: "+getActivity().getExternalCacheDir().getAbsolutePath() );
         initData();
         return binding.getRoot();
     }

@@ -14,6 +14,7 @@ import com.example.sun0002.trainproject.R;
 import com.example.sun0002.trainproject.databinding.ActivityNextBinding;
 import com.example.sun0002.trainproject.fragment.JobDetailFragment;
 import com.example.sun0002.trainproject.fragment.JobExecutionFragment;
+import com.example.sun0002.trainproject.fragment.RecordFragment;
 import com.example.sun0002.trainproject.fragment.TestFragment;
 
 
@@ -72,6 +73,10 @@ public class NextActivity extends AppCompatActivity {
             case "je"://作业详情
                 Log.e(TAG, "initdata: ////////" );
                 fragment = JobExecutionFragment.newInstance(bundle);
+                break;
+            case "rf"://作业详情
+                Log.e(TAG, "initdata: ////////" );
+                fragment = RecordFragment.newInstance(bundle);
                 break;
             case "hm"://房屋管理详情页
 

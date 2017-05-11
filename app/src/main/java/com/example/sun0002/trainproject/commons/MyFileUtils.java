@@ -22,24 +22,24 @@ public class MyFileUtils {
 
     public static void saveBitmap(Bitmap bm, int typeNum, String picName) {
         try {
-            Log.e(TAG, "saveBitmap: "+isFileExist(typeNum));
+//            Log.e(TAG, "saveBitmap: "+isFileExist(typeNum));
             if (!isFileExist(typeNum)) {
 
                 createSDDir(typeNum);
             }
             File f = new File(SD_PATH + typeNum + File.separator, picName + ".JPEG");
-            Log.e(TAG, "saveBitmap: " + SD_PATH + typeNum + File.separator);
-            Log.e(TAG, "saveBitmap: " + f.exists());
+//            Log.e(TAG, "saveBitmap: " + SD_PATH + typeNum + File.separator);
+//            Log.e(TAG, "saveBitmap: " + f.exists());
             if (f.exists()) {
                 f.delete();
             }
-            Log.e(TAG, "saveBitmap: "+f );
+//            Log.e(TAG, "saveBitmap: "+f );
             FileOutputStream out = new FileOutputStream(f);
-            Log.e(TAG, "saveBitmap: "+out );
+//            Log.e(TAG, "saveBitmap: "+out );
             bm.compress(Bitmap.CompressFormat.JPEG, 90, out);
             out.flush();
             out.close();
-            Log.e(TAG, "saveBitmap: " + f.exists());
+//            Log.e(TAG, "saveBitmap: " + f.exists());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -66,15 +66,15 @@ public class MyFileUtils {
     @SuppressWarnings("UnusedReturnValue")
     public static File createSDDir(int typeNum) {
         File dir = new File(SD_PATH + ""+typeNum+File.separator);
-        Log.e(TAG, "createSDDir: " +Environment.getExternalStorageState().equals(
-                Environment.MEDIA_MOUNTED));
+//        Log.e(TAG, "createSDDir: " +Environment.getExternalStorageState().equals(
+//                Environment.MEDIA_MOUNTED));
         if (Environment.getExternalStorageState().equals(
                 Environment.MEDIA_MOUNTED)) {
 
             System.out.println("createSDDir:" + dir.getAbsolutePath());
             System.out.println("createSDDir:" + dir.mkdir());
         }
-        Log.e(TAG, "createSDDir: "+dir );
+//        Log.e(TAG, "createSDDir: "+dir );
         return dir;
     }
     @SuppressWarnings("UnusedReturnValue")

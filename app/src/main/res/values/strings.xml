@@ -56,4 +56,11 @@
     <string name="s_et_description">(请输入详细描述)</string>
     <string name="s_b_save">保存</string>
     <string name="s_b_uploading">上传</string>
+
+    <!--录音界面-->
+    <string name="s_recording">录音</string>
+    <string name="s_title_event">事件标题</string>
+    <string name="s_descriptor">描述信息</string>
+    <string name="s_title_event_input">(请输入事件标题)</string>
+    <string name="s_descriptor_input">(请输入描述信息)</string>
 </resources>
